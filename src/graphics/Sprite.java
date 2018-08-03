@@ -2,7 +2,7 @@ package graphics;
 
 public class Sprite {
 
-    public static final int sheetWidth = 160;
+    public int sheetWidth = 160;
     private int[] pixels;
     private int xPos, yPos, width, height;
 
@@ -11,6 +11,15 @@ public class Sprite {
         this.yPos = yPos * TileSprites.SPRITE_HEIGHT;
         this.width = width;
         this.height = height;
+        loadPixels(sheet);
+    }
+
+    public Sprite(int[] sheet, int xPos, int yPos, int width, int height, int sheetWidth){
+        this.xPos = xPos * TileSprites.SPRITE_WIDTH;
+        this.yPos = yPos * TileSprites.SPRITE_HEIGHT;
+        this.width = width;
+        this.height = height;
+        this.sheetWidth = sheetWidth;
         loadPixels(sheet);
     }
 

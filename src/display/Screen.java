@@ -13,8 +13,8 @@ public class Screen {
 
     private int[] pixels;
 
-    public Screen(int widht, int height){
-        this.width = widht;
+    public Screen(int width, int height){
+        this.width = width;
         this.height = height;
         image = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
         pixels = ((DataBufferInt) image.getRaster().getDataBuffer()).getData();
@@ -41,8 +41,6 @@ public class Screen {
         if(yEnd > this.height) yEnd = this.height;
         int yDiff = (yStart - y);
 
-
-
         for(int i = yStart; i < yEnd; i++){
             for(int j = xStart; j < xEnd; j++){
                 if(item.getPixels()[(i - yStart + yDiff) * item.getWidth() + (j - xStart + xDiff)] >> 24 == 0){
@@ -51,5 +49,13 @@ public class Screen {
                 pixels[i * width + j] = item.getPixels()[(i - yStart + yDiff) * item.getWidth() + (j - xStart + xDiff)];
             }
         }
+    }
+
+    public int getWidth(){
+        return width;
+    }
+
+    public int getHeight(){
+        return height;
     }
 }

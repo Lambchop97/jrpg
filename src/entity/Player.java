@@ -1,8 +1,10 @@
 package entity;
 
 import display.Game;
+import graphics.Animation;
 import graphics.Sprite;
 import input.JKeyboard;
+import util.DisplayInfo;
 import world.World;
 
 import javax.imageio.ImageIO;
@@ -22,14 +24,19 @@ public class Player extends Entity{
         lastMove = 1;
         moved = false;
         try{
-            BufferedImage image = ImageIO.read(Game.class.getResourceAsStream("/Characters.png"));
+            BufferedImage image = ImageIO.read(Game.class.getResourceAsStream("/images/Characters.png"));
 
             int w = image.getWidth();
             int h = image.getHeight();
             int[] pixels = new int[w * h];
             image.getRGB(0, 0, w, h, pixels, 0, w);
 
-            sprite = new Sprite(pixels, 0, 0, 16, 16);
+            animations.clear();
+
+            Animation tempAni = Animation.createAnimation(pixels, "0,0", "idle", 300);
+            animations.add(tempAni);
+
+            currentAnimation = tempAni;
         } catch (IOException e){
             e.printStackTrace();
         }
@@ -56,7 +63,7 @@ public class Player extends Entity{
             lastMove *= KeyEvent.VK_RIGHT;
         }
         if(input.isKeyPressed(KeyEvent.VK_LEFT) && !(lastMove % KeyEvent.VK_LEFT == 0)){
-            if(checkMovement((xPos - 1) / 16, yPos /16)) {
+            if(checkMovement((xPos - 16) / 16, yPos /16)) {
                 move(-16, 0);
             }
             lastMove *= KeyEvent.VK_LEFT;
@@ -119,15 +126,15 @@ public class Player extends Entity{
     private void move(int dx, int dy){
         xPos += dx;
         if (xPos > 16 * World.SIZE) xPos = 16 * World.SIZE - 16;
-        if (xPos + 16 - Game.DIMENSION.width / 5 >= Game.getInstance().getCamera().getxOffset()) {
-            int dist = Math.max(80,70 + (xPos + 16 - (Game.getInstance().getCamera().getxOffset() + Game.DIMENSION.width / 5)));
+        if (xPos + 16 - DisplayInfo.GAME_DIM.width >= Game.getInstance().getCamera().getxOffset()) {
+            int dist = Math.max(80,70 + (xPos + 16 - (Game.getInstance().getCamera().getxOffset() + DisplayInfo.GAME_DIM.width)));
             //Game.getInstance().getCamera().move(80, 0);
             Game.getInstance().getCamera().setTarget(dist, 0, 30);
         }
         yPos += dy;
         if(yPos > 16 * World.SIZE) yPos = 16 * World.SIZE - 16;
-        if(yPos + 16 - Game.DIMENSION.height / 5 >= Game.getInstance().getCamera().getyOffset()){
-            int dist = Math.max(80,70 + (yPos + 16 - (Game.getInstance().getCamera().getyOffset() + Game.DIMENSION.height / 5)));
+        if(yPos + 16 - DisplayInfo.GAME_DIM.height >= Game.getInstance().getCamera().getyOffset()){
+            int dist = Math.max(80,70 + (yPos + 16 - (Game.getInstance().getCamera().getyOffset() + DisplayInfo.GAME_DIM.height)));
             //Game.getInstance().getCamera().move(0, 80);
             Game.getInstance().getCamera().setTarget(0, dist, 30);
         }

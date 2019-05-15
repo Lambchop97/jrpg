@@ -4,6 +4,7 @@ import camera.Camera;
 import graphics.Sprite;
 import graphics.TileSprites;
 import input.JKeyboard;
+import util.DisplayInfo;
 import world.World;
 
 import javax.imageio.ImageIO;
@@ -19,13 +20,9 @@ public class Game extends Canvas implements Runnable{
 
     private static Game game;
 
-    public static final Dimension DIMENSION = Toolkit.getDefaultToolkit().getScreenSize();
-
     private static JFrame frame;
 
     private boolean running = false;
-
-    public static final int updatedPerSecond = 60;
 
     private int frames = 0, updates = 0;
 
@@ -43,15 +40,15 @@ public class Game extends Canvas implements Runnable{
     private AffineTransform transform;
 
 
-    public static boolean intersected = false;
-    public static boolean battling = false;
+    private static boolean intersected = false;
+    private static boolean battling = false;
 
     public Game(){
         TileSprites.init();
         frame = new JFrame("Dank display");
-        frame.setMinimumSize(DIMENSION);
-        frame.setMaximumSize(DIMENSION);
-        frame.setPreferredSize(DIMENSION);
+        frame.setMinimumSize(DisplayInfo.DIM);
+        frame.setMaximumSize(DisplayInfo.DIM);
+        frame.setPreferredSize(DisplayInfo.DIM);
         frame.add(this);
         input = new JKeyboard(this);
         frame.pack();
@@ -60,9 +57,8 @@ public class Game extends Canvas implements Runnable{
         frame.setVisible(true);
         this.requestFocus();
 
-        mainScreen = new Screen(DIMENSION.width / 5, DIMENSION.height / 5);
-        battleScreen = new Screen(DIMENSION.width / 5, (DIMENSION.height - 28) / 5);
-
+        mainScreen = new Screen(DisplayInfo.GAME_DIM.width, DisplayInfo.GAME_DIM.height);
+        battleScreen = new Screen(DisplayInfo.GAME_DIM.width, DisplayInfo.GAME_DIM.height);
         Battle.init();
 
         camera = new Camera(0 ,0);
@@ -85,7 +81,7 @@ public class Game extends Canvas implements Runnable{
 
     public void run() {
         long fpsTimer = System.currentTimeMillis();
-        double nsPerUpdate = 1000000000d / updatedPerSecond;
+        double nsPerUpdate = 1000000000d / DisplayInfo.updatesPerSecond;
         long then = System.nanoTime();
         double delta = 0;
         while(running){
@@ -123,7 +119,7 @@ public class Game extends Canvas implements Runnable{
         if(input.isKeyPressed(KeyEvent.VK_H)){
             intersected = false;
             battling = false;
-            scale = 0;
+            scale = 1;
             angle = 0;
             up = true;
         }
@@ -192,7 +188,7 @@ public class Game extends Canvas implements Runnable{
         return world;
     }
 
-    public void setUpTransform(){
+    private void setUpTransform(){
         if(angle < 2*Math.PI - Math.PI/15){
             angle += Math.PI/15;
 
@@ -211,12 +207,12 @@ public class Game extends Canvas implements Runnable{
 
         transform = new AffineTransform();
 
-        transform.translate(getWidth() / 2, getHeight() / 2);
+//        transform.translate(getWidth() / 2, getHeight() / 2);
+//
+//        transform.rotate(angle);
 
-        transform.rotate(angle);
+        transform.setToScale(scale-.015625, scale-.13425);
 
-        transform.scale(scale, scale);
-
-        transform.translate(-battleScreen.getWidth()/2, -battleScreen.getHeight()/2);
+//        transform.translate(-battleScreen.getWidth()/2, -battleScreen.getHeight()/2);
     }
 }

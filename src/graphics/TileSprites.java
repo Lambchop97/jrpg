@@ -12,11 +12,11 @@ public class TileSprites {
     private static TileSet grassPath;
     private static TileSet grassSnow;
 
-    public static final int SPRITE_WIDTH = 16;
-    public static final int SPRITE_HEIGHT = 16;
+    static final int SPRITE_WIDTH = 16;
+    static final int SPRITE_HEIGHT = 16;
 
     private static BufferedImage image;
-    private static String path = "/Tiles.png";
+    private static String path = "/images/Tiles.png";
 
     public static void init(){
         try{

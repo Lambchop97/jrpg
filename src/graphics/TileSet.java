@@ -1,10 +1,11 @@
 package graphics;
 
 import display.Game;
+import util.DisplayInfo;
 
 public class TileSet {
 
-    public String name;
+    private String name;
     private String coords;
     private Sprite[] tiles;
     private int defaultSprite = 0;
@@ -12,7 +13,7 @@ public class TileSet {
 
     private static String[] tileNames = {"tl","t","tr","ml","m","mr","bl","b","br","o","ot","ol","or","ob","e1","e2"};
 
-    public TileSet(int[] sheet, String coords, String name){
+    TileSet(int[] sheet, String coords, String name){
         this.coords = coords;
         this.name = name;
 
@@ -38,11 +39,11 @@ public class TileSet {
         }
     }
 
-    public void setDefaultSprite(int index){
+    void setDefaultSprite(int index){
         if(index >= tiles.length){
-            if(lastError != Game.getInstance().getUpdates() / Game.updatedPerSecond){
+            if(lastError != Game.getInstance().getUpdates() / DisplayInfo.updatesPerSecond){
                 System.out.println("Index is too large in tileset " + name + ".getDefaultSprite()!");
-                lastError = Game.getInstance().getUpdates() / Game.updatedPerSecond;
+                lastError = Game.getInstance().getUpdates() / DisplayInfo.updatesPerSecond;
             }
         } else {
             defaultSprite = index;
@@ -51,18 +52,18 @@ public class TileSet {
 
     public Sprite getTile(int tile){
         if(tile >= tiles.length){
-            if(lastError != Game.getInstance().getUpdates() / Game.updatedPerSecond) {
+            if(lastError != Game.getInstance().getUpdates() / DisplayInfo.updatesPerSecond) {
                 System.out.println("Tile is too large in tileset " + name + ".getTile()!");
                 System.out.println("Defaulting to tile " + tileNames[defaultSprite]);
-                lastError = Game.getInstance().getUpdates() / Game.updatedPerSecond;
+                lastError = Game.getInstance().getUpdates() / DisplayInfo.updatesPerSecond;
             }
             return tiles[defaultSprite];
         }
         if(tiles[tile] == null){
-            if(lastError != Game.getInstance().getUpdates() / Game.updatedPerSecond) {
+            if(lastError != Game.getInstance().getUpdates() / DisplayInfo.updatesPerSecond) {
                 System.out.println("Tile " + tile + " is null in TileSet " + name + "!");
                 System.out.println("Defaulting to tile " + tileNames[defaultSprite]);
-                lastError = Game.getInstance().getUpdates() / Game.updatedPerSecond;
+                lastError = Game.getInstance().getUpdates() / DisplayInfo.updatesPerSecond;
             }
         }
         return tiles[tile];
@@ -80,17 +81,17 @@ public class TileSet {
         }
         if(index >= tiles.length || tiles[index] == null){
             index = defaultSprite;
-            if(lastError != Game.getInstance().getUpdates() / Game.updatedPerSecond) {
+            if(lastError != Game.getInstance().getUpdates() / DisplayInfo.updatesPerSecond) {
                 System.out.println("Tile " + tile + " is null in TileSet " + name + "!");
                 System.out.println("Defaulting to tile " + tileNames[defaultSprite]);
-                lastError = Game.getInstance().getUpdates() / Game.updatedPerSecond;
+                lastError = Game.getInstance().getUpdates() / DisplayInfo.updatesPerSecond;
             }
         }
         if(index == defaultSprite && i >= tiles.length){
-            if(lastError != Game.getInstance().getUpdates() / Game.updatedPerSecond) {
+            if(lastError != Game.getInstance().getUpdates() / DisplayInfo.updatesPerSecond) {
                 System.out.println("Tile " + tile + " isn't a valid name!");
                 System.out.println("Defaulting to tile " + tileNames[defaultSprite]);
-                lastError = Game.getInstance().getUpdates() / Game.updatedPerSecond;
+                lastError = Game.getInstance().getUpdates() / DisplayInfo.updatesPerSecond;
             }
         }
         return getTile(index);

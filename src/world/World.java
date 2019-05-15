@@ -4,6 +4,7 @@ import display.Game;
 import display.Screen;
 import entity.Entity;
 import entity.Player;
+import entity.Slime;
 import graphics.TileSprites;
 import input.JKeyboard;
 
@@ -13,6 +14,7 @@ import java.util.List;
 import java.util.Random;
 
 public class World {
+
 
     private static final int GRASS = 4;
     private static final int WATER = 9;
@@ -48,7 +50,10 @@ public class World {
 
         player = new Player(16, 16);
         entities = new ArrayList<>();
-        entities.add(new Entity(80, 80));
+        Random rand = new Random();
+        for(int i = 0; i < 10; i++){
+            entities.add(new Slime(16*rand.nextInt(16), 16*rand.nextInt(16)));
+        }
 
         generateTiles();
         smoothTiles();
@@ -140,7 +145,7 @@ public class World {
                     if (tiles[i + 1][k] == WATER) val++;
                     if (val == 4) {
                         tiles[i][k] = WATER;                                //Makes tile water if water is on both sides
-                        System.out.println("Tile (" + i + ", " + k + ") changed to water cause of surroundings");
+                        System.out.println("Tile (" + i + ", " + k + ") changed to water because of surroundings");
                     }
                 }
             }
@@ -320,25 +325,25 @@ public class World {
             e.render(screen);
         }
 
+
         player.render(screen);
     }
 
     public void update(JKeyboard input){
         player.update(input);
 
-        if(player.getMoved()){
-            for(Entity e: entities){
-                e.makeMove();
-                if(e.getxPos() == player.getxPos() && e.getyPos() == player.getyPos()){
-                    Game.intersected =  true;
-                }
-            }
+
+        for(Entity e: entities){
+            e.update(input);
+
+//            if(e.getxPos() == player.getxPos() && e.getyPos() == player.getyPos()) {
+//                Game.intersected = true;
+//            }
         }
     }
 
     public boolean isTileType(int x, int y, int type){
         if(x >= SIZE || x < 0 || y >= SIZE || y < 0) return true;
-        if(tiles[x][y] == type) return true;
-        else return false;
+        return tiles[x][y] == type;
     }
 }

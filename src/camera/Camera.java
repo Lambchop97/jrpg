@@ -2,6 +2,7 @@ package camera;
 
 import display.Game;
 import input.JKeyboard;
+import util.DisplayInfo;
 import world.World;
 
 import java.awt.event.KeyEvent;
@@ -31,13 +32,13 @@ public class Camera {
         updates = 0;
     }
 
-    public void move(int deltaX, int deltaY){
+    private void move(int deltaX, int deltaY){
         xOffset += deltaX;
         yOffset += deltaY;
         if(xOffset < 0) xOffset = 0;
         if(yOffset < 0) yOffset = 0;
-        if(xOffset + Game.DIMENSION.width / 5 > World.SIZE * 16) xOffset = World.SIZE * 16 - Game.DIMENSION.width / 5;
-        if(yOffset + Game.DIMENSION.height / 5 > World.SIZE * 16) yOffset = World.SIZE * 16 - Game.DIMENSION.height / 5;
+        if(xOffset + DisplayInfo.GAME_DIM.width > World.SIZE * 16) xOffset = World.SIZE * 16 - DisplayInfo.GAME_DIM.width;
+        if(yOffset + DisplayInfo.GAME_DIM.height > World.SIZE * 16) yOffset = World.SIZE * 16 - DisplayInfo.GAME_DIM.height;
     }
 
     public void setTarget(int x, int y, int updates){
@@ -75,8 +76,8 @@ public class Camera {
             yOffset += currentVelY;
             if(xOffset < 0) xOffset = 0;
             if(yOffset < 0) yOffset = 0;
-            if(xOffset + Game.DIMENSION.width / 5 > World.SIZE * 16) xOffset = World.SIZE * 16 - Game.DIMENSION.width / 5;
-            if(yOffset + Game.DIMENSION.height / 5 > World.SIZE * 16) yOffset = World.SIZE * 16 - Game.DIMENSION.height / 5;
+            if(xOffset + DisplayInfo.GAME_DIM.width > World.SIZE * 16) xOffset = World.SIZE * 16 - DisplayInfo.GAME_DIM.width;
+            if(yOffset + DisplayInfo.GAME_DIM.height > World.SIZE * 16) yOffset = World.SIZE * 16 - DisplayInfo.GAME_DIM.height;
             updates--;
         }
     }

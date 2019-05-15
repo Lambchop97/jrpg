@@ -1,6 +1,7 @@
 package display;
 
 import graphics.Sprite;
+import util.GraphicsUtil;
 
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
@@ -9,18 +10,18 @@ public class Screen {
 
     private int width, height;
 
-    public BufferedImage image;
+    BufferedImage image;
 
     private int[] pixels;
 
-    public Screen(int width, int height){
+    Screen(int width, int height){
         this.width = width;
         this.height = height;
         image = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
         pixels = ((DataBufferInt) image.getRaster().getDataBuffer()).getData();
     }
 
-    public void clear(){
+    void clear(){
         for(int i = 0; i < pixels.length; i++){
             pixels[i] = 0xff123456;
         }
@@ -41,12 +42,24 @@ public class Screen {
         if(yEnd > this.height) yEnd = this.height;
         int yDiff = (yStart - y);
 
+        int[] iPix = item.getPixels();
+
         for(int i = yStart; i < yEnd; i++){
             for(int j = xStart; j < xEnd; j++){
-                if(item.getPixels()[(i - yStart + yDiff) * item.getWidth() + (j - xStart + xDiff)] >> 24 == 0){
+                // If the pixel in the sprite is completely transparent skip it
+                if(iPix[(i - yStart + yDiff) * item.getWidth() + (j - xStart + xDiff)] >>> 24 == 0){
                     continue;
                 }
-                pixels[i * width + j] = item.getPixels()[(i - yStart + yDiff) * item.getWidth() + (j - xStart + xDiff)];
+
+                // If the pixel in the sprite has no transparency just replace the color
+                // Otherwise apply an alpha blend
+                if((iPix[(i - yStart + yDiff) * item.getWidth() + (j - xStart + xDiff)] >>> 24) == 0xff){
+                    pixels[i * width + j] = item.getPixels()[(i - yStart + yDiff) * item.getWidth() + (j - xStart + xDiff)];
+                } else {
+                    int colorApply = iPix[(i - yStart + yDiff) * item.getWidth() + (j - xStart + xDiff)];
+                    int colorBase = pixels[i * width + j];
+                    pixels[i * width + j] = GraphicsUtil.alphaBlend(colorApply, colorBase);
+                }
             }
         }
     }

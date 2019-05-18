@@ -1,6 +1,9 @@
 package display;
 
 import camera.Camera;
+import entity.Entity;
+import entity.Rat;
+import entity.Slime;
 import graphics.Sprite;
 import graphics.TileSprites;
 import input.JKeyboard;
@@ -60,6 +63,9 @@ public class Game extends Canvas implements Runnable{
         mainScreen = new Screen(DisplayInfo.GAME_DIM.width, DisplayInfo.GAME_DIM.height);
         battleScreen = new Screen(DisplayInfo.GAME_DIM.width, DisplayInfo.GAME_DIM.height);
         Battle.init();
+        Entity.init();
+        Slime.init();
+        Rat.init();
 
         camera = new Camera(0 ,0);
         world = new World();

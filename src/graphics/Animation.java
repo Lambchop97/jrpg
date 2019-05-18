@@ -2,6 +2,8 @@ package graphics;
 
 import display.Screen;
 
+import java.util.Random;
+
 public class Animation {
 
     private Sprite[] sprites;
@@ -117,6 +119,19 @@ public class Animation {
             return this.name.matches(((Animation) o).name);
         }
         return false;
+    }
+
+    public Animation getCopy(){
+        Animation ani = new Animation(sprites, name);
+        ani.numFrames = numFrames;
+        ani.frameLengths = frameLengths;
+        Random rand = new Random();
+        ani.addStartBias(rand.nextInt(1000));
+        return ani;
+    }
+
+    private void addStartBias(int bias){
+        frameTimer += bias;
     }
 
     public Sprite getFrame(){

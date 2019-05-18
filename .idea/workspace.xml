@@ -2,42 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba9cdf83-38ea-49a4-9e65-465151e95f6c" name="Default" comment="A bunch of animation stuff">
-      <change afterPath="$PROJECT_DIR$/res/animations/slime/idle.ani" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/animations/slime/idle_hop_l.ani" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/animations/slime/idle_hop_r.ani" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/animations/slime/idle_swell_l.ani" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/animations/slime/idle_swell_r.ani" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/animations/slime/roll_l.ani" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/animations/slime/roll_r.ani" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/animations/slime/turn_l.ani" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/animations/slime/turn_r.ani" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/images/BattleCircle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/images/BattleInterface.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/images/BattleInterfaceUnderline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/images/Characters.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/images/Enemy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/images/Guy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/images/Items.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/images/ItemsWorld.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/images/Tiles.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/images/Untitled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Slime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphics/Animation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphics/SGPosition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphics/SpriteGrouping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/DisplayInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/GraphicsUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/animations/rat/gaze0.ani" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/animations/rat/gaze1.ani" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/animations/rat/gaze2.ani" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/animations/rat/idle.ani" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/animations/rat/move0to1.ani" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/animations/rat/move0to2.ani" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/animations/rat/move1to0.ani" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/animations/rat/move1to2.ani" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/animations/rat/move2to0.ani" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/animations/rat/move2to1.ani" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/animations/rat/move_up0.ani" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/animations/rat/scurry.ani" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/Rat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid11592.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jrpg/BattleCircle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jrpg/BattleInterface.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jrpg/Characters.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jrpg/Enemy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jrpg/Guy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jrpg/ItemsWorld.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jrpg/Tiles.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jrpg/Untitled.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/jrpg/camera/Camera.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jrpg/camera/Camera.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/jrpg/display/Battle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jrpg/display/Battle.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/jrpg/display/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jrpg/display/Game.class" afterDir="false" />
@@ -47,25 +25,16 @@
       <change beforePath="$PROJECT_DIR$/out/production/jrpg/graphics/Sprite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jrpg/graphics/Sprite.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/jrpg/graphics/TileSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jrpg/graphics/TileSet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/jrpg/graphics/TileSprites.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jrpg/graphics/TileSprites.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jrpg/input/JKeyboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jrpg/input/JKeyboard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/jrpg/world/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jrpg/world/World.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/BattleCircle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/BattleInterface.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/Characters.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/Enemy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/Guy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/ItemsWorld.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/Tiles.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/Untitled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/camera/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/camera/Camera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/display/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/display/Battle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/animations/slime/turn_l.ani" beforeDir="false" afterPath="$PROJECT_DIR$/res/animations/slime/turn_l.ani" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/animations/slime/turn_r.ani" beforeDir="false" afterPath="$PROJECT_DIR$/res/animations/slime/turn_r.ani" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/images/Enemy.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/images/Enemy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/images/Tiles.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/images/Tiles.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/display/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/display/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/display/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/display/Screen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Sprite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/TileSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/TileSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/TileSprites.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/TileSprites.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Slime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Slime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Animation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Animation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/world/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/world/World.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -106,28 +75,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="ani" value="13" />
-          <entry key="java" value="34" />
+          <entry key="ani" value="43" />
+          <entry key="java" value="39" />
           <entry key="temp" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="34" />
-          <entry key="PLAIN_TEXT" value="14" />
+          <entry key="JAVA" value="39" />
+          <entry key="PLAIN_TEXT" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="ani" value="438" />
-          <entry key="java" value="6115" />
+          <entry key="ani" value="822" />
+          <entry key="java" value="8076" />
           <entry key="txt" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6115" />
-          <entry key="PLAIN_TEXT" value="474" />
+          <entry key="JAVA" value="8076" />
+          <entry key="PLAIN_TEXT" value="858" />
         </counts>
       </usages-collector>
     </session>
@@ -139,17 +108,53 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/display/Game.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="190">
-                  <caret line="190" column="11" selection-start-line="190" selection-start-column="11" selection-end-line="190" selection-end-column="11" />
+                <state relative-caret-position="672">
+                  <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/display/Battle.java">
+            <entry file="file://$PROJECT_DIR$/src/entity/Entity.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="327">
-                  <caret line="86" column="11" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="11" />
+                <state relative-caret-position="482">
+                  <caret line="190" column="24" selection-start-line="190" selection-start-column="24" selection-end-line="190" selection-end-column="24" />
+                  <folding>
+                    <element signature="e#5652#5653#0" expanded="true" />
+                    <element signature="e#5723#5724#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/entity/Rat.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="333">
+                  <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#3045#3046#0" expanded="true" />
+                    <element signature="e#3113#3114#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/res/animations/rat/gaze2.ani">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="84">
+                  <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/entity/Player.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="207">
+                  <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -158,30 +163,14 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/entity/Entity.java">
+            <entry file="file://$PROJECT_DIR$/src/graphics/Animation.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-114">
-                  <caret line="171" lean-forward="true" selection-start-line="171" selection-end-line="171" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/camera/Camera.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="368">
-                  <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/graphics/SGPosition.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="295">
-                  <caret line="41" column="20" lean-forward="true" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+                <state relative-caret-position="482">
+                  <caret line="128" column="45" selection-start-line="128" selection-start-column="45" selection-end-line="128" selection-end-column="45" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="e#3835#3836#0" expanded="true" />
+                    <element signature="e#3867#3868#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -190,8 +179,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/world/World.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="369">
-                  <caret line="346" column="35" selection-start-line="346" selection-start-column="35" selection-end-line="346" selection-end-column="35" />
+                <state relative-caret-position="477">
+                  <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
                 </state>
               </provider>
             </entry>
@@ -203,8 +192,21 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/entity/Slime.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1911">
-                  <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
+                <state relative-caret-position="399">
+                  <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+                  <folding>
+                    <element signature="e#4633#4634#0" expanded="true" />
+                    <element signature="e#4703#4704#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/res/animations/rat/move_up0.ani">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="126">
+                  <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
                 </state>
               </provider>
             </entry>
@@ -250,21 +252,34 @@
         <option value="$PROJECT_DIR$/res/animations/slime/idle_hop_l.ani" />
         <option value="$PROJECT_DIR$/res/animations/slime/roll_l.ani" />
         <option value="$PROJECT_DIR$/res/animations/slime/roll_r.ani" />
-        <option value="$PROJECT_DIR$/res/animations/slime/turn_r.ani" />
-        <option value="$PROJECT_DIR$/res/animations/slime/turn_l.ani" />
-        <option value="$PROJECT_DIR$/src/entity/Slime.java" />
-        <option value="$PROJECT_DIR$/src/entity/Player.java" />
-        <option value="$PROJECT_DIR$/src/graphics/Animation.java" />
         <option value="$PROJECT_DIR$/src/graphics/Sprite.java" />
         <option value="$PROJECT_DIR$/src/graphics/TileSet.java" />
         <option value="$PROJECT_DIR$/src/util/DisplayInfo.java" />
         <option value="$PROJECT_DIR$/src/display/Screen.java" />
         <option value="$PROJECT_DIR$/src/display/Battle.java" />
         <option value="$PROJECT_DIR$/src/graphics/TileSprites.java" />
-        <option value="$PROJECT_DIR$/src/entity/Entity.java" />
         <option value="$PROJECT_DIR$/src/camera/Camera.java" />
         <option value="$PROJECT_DIR$/src/graphics/SGPosition.java" />
+        <option value="$PROJECT_DIR$/res/animations/slime/turn_l.ani" />
+        <option value="$PROJECT_DIR$/res/animations/slime/turn_r.ani" />
+        <option value="$PROJECT_DIR$/res/animations/rat/idle.ani" />
+        <option value="$PROJECT_DIR$/res/animations/rat/scurry.ani" />
         <option value="$PROJECT_DIR$/src/display/Game.java" />
+        <option value="$PROJECT_DIR$/src/entity/Player.java" />
+        <option value="$PROJECT_DIR$/src/entity/Entity.java" />
+        <option value="$PROJECT_DIR$/res/animations/rat/move2to1.ani" />
+        <option value="$PROJECT_DIR$/res/animations/rat/move2to0.ani" />
+        <option value="$PROJECT_DIR$/res/animations/rat/move1to2.ani" />
+        <option value="$PROJECT_DIR$/res/animations/rat/move1to0.ani" />
+        <option value="$PROJECT_DIR$/res/animations/rat/move0to2.ani" />
+        <option value="$PROJECT_DIR$/res/animations/rat/move0to1.ani" />
+        <option value="$PROJECT_DIR$/res/animations/rat/gaze0.ani" />
+        <option value="$PROJECT_DIR$/res/animations/rat/gaze1.ani" />
+        <option value="$PROJECT_DIR$/res/animations/rat/gaze2.ani" />
+        <option value="$PROJECT_DIR$/src/graphics/Animation.java" />
+        <option value="$PROJECT_DIR$/res/animations/rat/move_up0.ani" />
+        <option value="$PROJECT_DIR$/src/entity/Slime.java" />
+        <option value="$PROJECT_DIR$/src/entity/Rat.java" />
         <option value="$PROJECT_DIR$/src/world/World.java" />
       </list>
     </option>
@@ -307,13 +322,21 @@
               <item name="jrpg" type="b2602c69:ProjectViewProjectNode" />
               <item name="jrpg" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="slime" type="462c0819:PsiDirectoryNode" />
+              <item name="animations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jrpg" type="b2602c69:ProjectViewProjectNode" />
               <item name="jrpg" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="animations" type="462c0819:PsiDirectoryNode" />
+              <item name="rat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jrpg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jrpg" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="animations" type="462c0819:PsiDirectoryNode" />
+              <item name="slime" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jrpg" type="b2602c69:ProjectViewProjectNode" />
@@ -365,7 +388,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557963265687" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558204157576" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="project.structure.last.edited" value="Project" />
@@ -374,9 +397,12 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Josh\IntelliJIDEAProjects\jrpg\res\animations\rat" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Josh\IntelliJIDEAProjects\jrpg\res\animations\slime" />
       <recent name="C:\Users\Josh\IntelliJIDEAProjects\jrpg\res\images" />
+      <recent name="C:\Users\Josh\IntelliJIDEAProjects\jrpg\res\animations\slime" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -461,16 +487,23 @@
       <workItem from="1534550409834" duration="1638000" />
       <workItem from="1536087702729" duration="120000" />
     </task>
+    <task id="LOCAL-00001" summary="A bunch of animation stuff">
+      <created>1557963296303</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1557963296303</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="82986000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11140725" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.117803834" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -479,15 +512,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.20498915" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20498915" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.3275488" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3275488" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -547,13 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/animations/slime/idle.ani">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/util/GraphicsUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -596,59 +622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/animations/slime/turn_r.ani">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/animations/slime/turn_l.ani">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Slime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1911">
-          <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="65" column="39" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/graphics/Animation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="116" column="59" selection-start-line="116" selection-start-column="59" selection-end-line="116" selection-end-column="59" />
-          <folding>
-            <element signature="e#954#955#0" expanded="true" />
-            <element signature="e#988#989#0" expanded="true" />
-            <element signature="e#895#896#0" expanded="true" />
-            <element signature="e#946#947#0" expanded="true" />
-            <element signature="e#976#977#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
-            <element signature="e#1123#1124#0" expanded="true" />
-            <element signature="e#1153#1154#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1054#1055#0" expanded="true" />
-            <element signature="e#1085#1086#0" expanded="true" />
-            <element signature="e#1140#1141#0" expanded="true" />
-            <element signature="e#3587#3588#0" expanded="true" />
-            <element signature="e#3624#3625#0" expanded="true" />
-            <element signature="e#3656#3657#0" expanded="true" />
-            <element signature="e#3688#3689#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -700,10 +673,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Entity.java">
+    <entry file="file://$PROJECT_DIR$/res/animations/slime/turn_r.ani">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
-          <caret line="171" lean-forward="true" selection-start-line="171" selection-end-line="171" />
+        <state relative-caret-position="42">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/animations/slime/turn_l.ani">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/animations/slime/idle.ani">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/animations/rat/idle.ani">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graphics/SGPosition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -714,27 +718,150 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/graphics/SGPosition.java">
+    <entry file="file://$PROJECT_DIR$/res/animations/rat/scurry.ani">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="41" column="20" lean-forward="true" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+        <state relative-caret-position="42">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="190" column="24" selection-start-line="190" selection-start-column="24" selection-end-line="190" selection-end-column="24" />
+          <folding>
+            <element signature="e#5652#5653#0" expanded="true" />
+            <element signature="e#5723#5724#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/display/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="190" column="11" selection-start-line="190" selection-start-column="11" selection-end-line="190" selection-end-column="11" />
+        <state relative-caret-position="672">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/animations/rat/move2to1.ani">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/animations/rat/move2to0.ani">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/animations/rat/move1to2.ani">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/animations/rat/move1to0.ani">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/animations/rat/move0to2.ani">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/animations/rat/move0to1.ani">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/animations/rat/gaze0.ani">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/animations/rat/gaze1.ani">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/animations/rat/gaze2.ani">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graphics/Animation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="128" column="45" selection-start-line="128" selection-start-column="45" selection-end-line="128" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3835#3836#0" expanded="true" />
+            <element signature="e#3867#3868#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/animations/rat/move_up0.ani">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/Rat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3045#3046#0" expanded="true" />
+            <element signature="e#3113#3114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/Slime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+          <folding>
+            <element signature="e#4633#4634#0" expanded="true" />
+            <element signature="e#4703#4704#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/world/World.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="346" column="35" selection-start-line="346" selection-start-column="35" selection-end-line="346" selection-end-column="35" />
+        <state relative-caret-position="477">
+          <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
         </state>
       </provider>
     </entry>

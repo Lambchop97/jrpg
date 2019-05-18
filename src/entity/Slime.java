@@ -20,11 +20,17 @@ public class Slime extends Entity{
     private int framesLeft = 0;
     private int frame = 0;
     private boolean left = true;
+    private static List<Animation> staticAnimations;
+
 
     public Slime(int x, int y){
         super(x,y);
 
-        loadAnimations("/animations/slime");
+        animations.clear();
+
+        for(Animation a: staticAnimations){
+            animations.add(a.getCopy());
+        }
         currentAnimation = animations.get(3);
     }
 
@@ -117,21 +123,19 @@ public class Slime extends Entity{
 
             moveFrames = new int[animations.get(5).getNumFrames()][2];
 
-            int numX = 0;
+            int[] num = new int[2];
             if(move[0] != 0){
-                numX = Math.abs(move[0]) / move[0];
+                num[0] = Math.abs(move[0]) / move[0];
             }
 
-            int numY = 0;
             if(move[1] != 0){
-                numY = Math.abs(move[1]) / move[1];
+                num[1] = Math.abs(move[1]) / move[1];
             }
 
             int k = 0;
             for(int i = 0; i < 16; i++){
-                if(i == 1 || i == 4 || i == 7 || i == 10 || i == 13) k++;
-                moveFrames[17+i+k][0] = numX;
-                moveFrames[17+i+k][1] = numY;
+                if(i == 1 || i == 3 || i == 5 || i == 10 || i == 13) k++;
+                moveFrames[19+i+k] = num;
             }
             framesLeft += animations.get(5).getNumFrames();
             frame = 0;
@@ -149,4 +153,8 @@ public class Slime extends Entity{
         left = !left;
     }
 
+
+    public static void init(){
+        staticAnimations = loadAnimations("/animations/slime");
+    }
 }

@@ -4,6 +4,7 @@ import display.Game;
 import display.Screen;
 import entity.Entity;
 import entity.Player;
+import entity.Rat;
 import entity.Slime;
 import graphics.TileSprites;
 import input.JKeyboard;
@@ -54,6 +55,12 @@ public class World {
         for(int i = 0; i < 10; i++){
             entities.add(new Slime(16*rand.nextInt(16), 16*rand.nextInt(16)));
         }
+
+
+        for(int i = 0; i < 10; i++){
+            entities.add(new Rat(16*rand.nextInt(16), 16*rand.nextInt(16)));
+        }
+
 
         generateTiles();
         smoothTiles();

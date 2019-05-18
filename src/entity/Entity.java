@@ -16,12 +16,14 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 
 public class Entity {
 
     int xPos, yPos;
     List<Integer> animationQueue;
+    private static List<Animation> staticAnimations;
     List<Animation> animations;
     Animation currentAnimation;
     Random rand;
@@ -31,25 +33,14 @@ public class Entity {
         yPos = y;
         rand = new Random();
 
-        animationQueue = new ArrayList<>();
         animations = new ArrayList<>();
 
-        loadAnimations("/animations/slime");
-//        try{
-//            BufferedImage image = ImageIO.read(Game.class.getResourceAsStream(path));
-//
-//            int w = image.getWidth();
-//            int h = image.getHeight();
-//            sheet = new int[w * h];
-//            image.getRGB(0, 0, w, h, sheet, 0, w);
-//
-//            Animation tempAni = Animation.createAnimation(sheet, "0,0", "idle", 300);
-//            animations.add(tempAni);
-//
-//            currentAnimation = tempAni;
-//        } catch (IOException e){
-//            e.printStackTrace();
-//        }
+        for(Animation a: staticAnimations){
+            animations.add(a.getCopy());
+        }
+        animationQueue = new ArrayList<>();
+
+        currentAnimation = animations.get(0);
     }
 
     public void update(JKeyboard input){
@@ -122,17 +113,18 @@ public class Entity {
     }
 
 
-    void loadAnimations(String path){
+    static List<Animation> loadAnimations(String path){
         // Clear existing animations (done for subclasses as they need to erase the default animations)
-        animations.clear();
+        List<Animation> anis = new ArrayList<>();
 
         // Get the folder of animations from path
-        URL folderurl = Game.class.getResource(path + "/idle_hop_r.ani");
+        URL folderURL = Game.class.getResource(path + "/idle.ani");
 
-        File folder = new File(folderurl.getPath());
+        File folder = new File(folderURL.getPath());
 
         // Load an animation for each file in the folder
-        for(File f: folder.getParentFile().listFiles()){
+
+        for(File f: Objects.requireNonNull(folder.getParentFile().listFiles())){
             try{
                 // Set up data
                 BufferedReader reader = new BufferedReader(new FileReader(f));
@@ -186,12 +178,16 @@ public class Entity {
                 int[] sSheet = GraphicsUtil.loadSpriteSheet(sheet);
 
                 // Create and add animation
-                animations.add(Animation.createAnimation(sSheet, animation, name, frames));
+                anis.add(Animation.createAnimation(sSheet, animation, name, frames));
                 System.out.println("loaded " + name);
             } catch (Exception e){
                 e.printStackTrace();
             }
         }
-        currentAnimation = animations.get(0);
+        return anis;
+    }
+
+    public static void init(){
+        staticAnimations = loadAnimations("/animations/slime");
     }
 }

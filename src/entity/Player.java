@@ -11,6 +11,8 @@ import javax.imageio.ImageIO;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Player extends Entity{
 
@@ -19,8 +21,11 @@ public class Player extends Entity{
 
     private boolean moved;
 
+    private List<Animation> animations;
+
     public Player(int x, int y){
         super(x, y);
+        animations = new ArrayList<>();
         lastMove = 1;
         moved = false;
         try{
